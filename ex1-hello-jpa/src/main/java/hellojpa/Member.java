@@ -8,7 +8,15 @@ import java.util.Date;
 @Entity
 public class Member {
 
+    /*
+        strategy
+        AUTO -> 방언에 맞춰 자동 생성
+        IDENTITY -> 데이터베이스에 위임
+        SEQUENCE -> 시퀀스 생성하여 관리, @SequenceGenerator와 함께 사용 가능
+        TABLE -> 태이블 생성하여 관리, @TableGenerator와 함께 사용 가능
+     */
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "name", nullable = false)

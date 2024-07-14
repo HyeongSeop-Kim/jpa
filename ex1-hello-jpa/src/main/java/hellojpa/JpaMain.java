@@ -80,11 +80,10 @@ public class JpaMain {
 //            Member member2 = em.find(Member.class, 150L);
 
             Member member = new Member();
-            member.setId(3L);
             member.setUsername("C");
-            member.setRoleType(RoleType.GUEST);
 
             em.persist(member);
+            System.out.println("member.getId() = " + member.getId());
 
             tx.commit();
         } catch (Exception e) {
