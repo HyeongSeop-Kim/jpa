@@ -4,7 +4,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import java.util.List;
 
 public class JpaMain {
 
@@ -78,12 +77,6 @@ public class JpaMain {
 //            member.setName("AAAAA");
 //            em.detach(member);
 //            Member member2 = em.find(Member.class, 150L);
-
-            Member member = new Member();
-            member.setUsername("C");
-
-            em.persist(member);
-            System.out.println("member.getId() = " + member.getId());
 
             tx.commit();
         } catch (Exception e) {

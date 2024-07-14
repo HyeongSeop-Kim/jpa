@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
-public class Member {
+public class OldMember {
 
     /*
         strategy
@@ -43,7 +43,7 @@ public class Member {
     @Transient
     private int temp;
 
-    public Member() {}
+    public OldMember() {}
 
     public Long getId() {
         return id;
